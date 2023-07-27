@@ -378,14 +378,21 @@ class HalsteadAnalyzer extends AbstractCachingAnalyzer implements AnalyzerNodeAw
      */
     public function calculateHalsteadMeasures(array $basis)
     {
-        print("n2 ".$basis['n2']);
+        // temporary operator & operand helper
+        print("OPERATORS: ".$operators);
+        echo "\n\n";
+        print("OPERANDS: ".$operands);
+        echo "\n\n";
+        print("Unique Operator (n1): ".$basis['n1']);
         echo "\n";
-        print("n1 ".$basis['n1']);
+        print("Unique Operand (n2): ".$basis['n2']);
         echo "\n";
-        print("N1 ".$basis['N1']);
+        print("All Operator (N1): ".$basis['N1']);
         echo "\n";
-        print("N2 ".$basis['N2']);
+        print("All Operand (N2): ".$basis['N2']);
         echo "\n";
+        // temporary operator & operand helper
+        
         $measures = array();
         $measures[self::M_HALSTEAD_LENGTH] = $basis['N1'] + $basis['N2'];
         $measures[self::M_HALSTEAD_VOCABULARY] = $basis['n1'] + $basis['n2'];
