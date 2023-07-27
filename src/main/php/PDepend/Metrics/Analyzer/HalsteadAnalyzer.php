@@ -358,6 +358,13 @@ class HalsteadAnalyzer extends AbstractCachingAnalyzer implements AnalyzerNodeAw
             }
         }
 
+        // temporary helper
+        print("OPERATORS: ".$operators);
+        echo "\n\n";
+        print("OPERANDS: ".$operands);
+        echo "\n\n\n";
+        // temporary helper
+
         $this->metrics[$callable->getId()] = array(
             'n1' => count(array_unique($operators)),
             'n2' => count(array_unique($operands)),
@@ -379,10 +386,6 @@ class HalsteadAnalyzer extends AbstractCachingAnalyzer implements AnalyzerNodeAw
     public function calculateHalsteadMeasures(array $basis)
     {
         // temporary operator & operand helper
-        print("OPERATORS: ".$operators);
-        echo "\n\n";
-        print("OPERANDS: ".$operands);
-        echo "\n\n";
         print("Unique Operator (n1): ".$basis['n1']);
         echo "\n";
         print("Unique Operand (n2): ".$basis['n2']);
