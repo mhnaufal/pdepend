@@ -359,9 +359,11 @@ class HalsteadAnalyzer extends AbstractCachingAnalyzer implements AnalyzerNodeAw
         }
 
         // temporary helper
-        print("OPERATORS: ".$operators);
+        $t = implode(",",$operators);
+        echo $t;
         echo "\n\n";
-        print("OPERANDS: ".$operands);
+        $d = implode(",",$operands);
+        print("OPERANDS: ".d);
         echo "\n\n\n";
         // temporary helper
 
