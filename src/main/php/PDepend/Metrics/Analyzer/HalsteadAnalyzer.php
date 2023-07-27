@@ -358,21 +358,21 @@ class HalsteadAnalyzer extends AbstractCachingAnalyzer implements AnalyzerNodeAw
             }
         }
 
-        // temporary helper
-        $t = implode(",",$operators);
-        echo $t;
-        echo "\n\n";
-        $d = implode(",",$operands);
-        print("OPERANDS: ".d);
-        echo "\n\n\n";
-        // temporary helper
-
         $this->metrics[$callable->getId()] = array(
             'n1' => count(array_unique($operators)),
             'n2' => count(array_unique($operands)),
             'N1' => count($operators),
             'N2' => count($operands),
         );
+
+        // temporary helper
+        $t = implode(",",$operators);
+        echo $t;
+        echo "\n\n";
+        $d = implode(",",$operands);
+        echo $d;
+        echo "\n\n\n";
+        // temporary helper
     }
 
     /**
