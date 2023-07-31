@@ -225,7 +225,7 @@ class HalsteadAnalyzer extends AbstractCachingAnalyzer implements AnalyzerNodeAw
                  * “for (...)”, “if (...)”, “switch (...)”, “while(...)”,
                  * “try-catch( )” are counted together as one operator.
                  */
-                // case Tokens::T_SWITCH: // not followed by ()
+                case Tokens::T_SWITCH: // not followed by ()
                 // case Tokens::T_TRY: // not followed by ()
                 // case Tokens::T_DO: // always comes with while, which accounts for () already
                 case Tokens::T_IF:
@@ -366,10 +366,10 @@ class HalsteadAnalyzer extends AbstractCachingAnalyzer implements AnalyzerNodeAw
         );
 
         // temporary helper
-        $t = implode(",",$operators);
+        $t = implode(", ",$operators);
         echo $t;
         echo "\n\n";
-        $d = implode(",",$operands);
+        $d = implode(", ",$operands);
         echo $d;
         echo "\n\n\n";
         // temporary helper
